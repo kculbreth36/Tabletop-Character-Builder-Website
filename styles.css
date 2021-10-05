@@ -191,8 +191,9 @@
 /* Hero Section */
 
 .hero {
-    background: url(banner.webp);
-    height: 600px;
+    background: url(banner.jfif);
+    background-repeat: no-repeat;
+    width: 100%;
 }
 
 .hero__container {
