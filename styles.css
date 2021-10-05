@@ -490,9 +490,7 @@
 }
 
 .services__card:nth-child(2) {
-    background-image: url("Rocket League menu.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(-55deg, #fff 0%, #99ccff 29%, #0096ff 67%, #0033cc 100%);
 }
 
 .services__card:nth-child(3) {
