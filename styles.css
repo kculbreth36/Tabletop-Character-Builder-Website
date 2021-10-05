@@ -7,7 +7,7 @@
 }
 
 .navbar {
-    background: #131313;
+    background: #fff;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -55,7 +55,7 @@
 }
 
 .navbar__links {
-    color: #fff;
+    color: #ff9100;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,7 +87,7 @@
     background: #833ab4;
     background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
     background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-    color: #fff;
+    color: #ff9100;
     transition: all 0.3s ease;
 }
 
@@ -120,7 +120,7 @@
     }
 
     .navbar__menu.active {
-        background: #131313;
+        background: #fff;
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
@@ -138,7 +138,7 @@
         height: 3px;
         margin: 5px auto;
         transition: all 0.3s ease;
-        background: #fff;
+        background: #ff9100;
     }
 
     .navbar__item {
@@ -191,9 +191,8 @@
 /* Hero Section */
 
 .hero {
-    background: #000000;
-    background: linear-gradient(to right, #161616, #000000);
-    padding: 200px 0 ;
+    background: url(banner.webp);
+    height: 600px;
 }
 
 .hero__container {
@@ -210,13 +209,12 @@
 .hero__heading {
     font-size: 100px;
     margin-bottom: 24px;
-    color: #fff;
+    color: #ff9100;
 }
 
 .hero__heading span {
-    background: #833ab4;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background-color: #fff;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -226,9 +224,8 @@
 
 .hero__description {
     font-size: 60px;
-    background: #da22ff;
-    background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
-    background: linear-gradient(to right, #8f0eff, #da22ff);
+    background: #fff;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -253,7 +250,7 @@
 /* About Section */
 
 .main {
-    background-color: #131313;
+    background-color: #fff;
     padding: 10rem 0;
 }
 
@@ -450,7 +447,7 @@
 
 
 .services {
-    background: #131313;
+    background: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -490,11 +487,19 @@
 }
 
 .services__card:nth-child(2) {
-    background-image: linear-gradient(-55deg, #fff 0%, #99ccff 29%, #0096ff 67%, #0033cc 100%);
+    margin: 10px;
+    height: 425px;
+    width: 300px;
+    background: url(crl.png);
+    background-size: 300px 425px;
 }
 
 .services__card:nth-child(3) {
-    background-image: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #ff0000 100%);
+    margin: 10px;
+    height: 425px;
+    width: 300px;
+    background: url(val.jpg);
+    background-size: 100%;
 }
 
 .services__card:nth-child(4) {
@@ -502,10 +507,16 @@
 }
 
 .services__card h2 {
+    color: #fff;
+    text-shadow:  #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
     text-align: center;
 }
 
 .services__card p {
+    color: #fff;
+    text-shadow:  #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
     text-align: center;
     margin-top: 24px;
     font-size: 20px;
@@ -571,7 +582,7 @@
 
 .footer__links {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1600px;
     display: flex;
     justify-content: center;
 }
@@ -585,8 +596,8 @@
     flex-direction: column;
     align-items: flex-start;
     margin: 16px;
-    text-align: left;
-    width: 160px;
+    text-align: center;
+    width: 300px;
     box-sizing: border-box;
 }
 
