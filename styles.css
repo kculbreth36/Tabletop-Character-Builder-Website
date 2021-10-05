@@ -31,7 +31,7 @@
 }
 
 #navbar__logo {
-    background-color: #ff9100;
+    background-color: #f56600;
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -55,7 +55,7 @@
 }
 
 .navbar__links {
-    color: #ff9100;
+    color: #f56600;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,8 +84,8 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #833ab4;
-    color: #ff9100;
+    background: #522D80;
+    color: #f56600;
     transition: all 0.3s ease;
 }
 
@@ -136,7 +136,7 @@
         height: 3px;
         margin: 5px auto;
         transition: all 0.3s ease;
-        background: #ff9100;
+        background: #f56600;
     }
 
     .navbar__item {
@@ -209,7 +209,7 @@
 .hero__heading {
     font-size: 100px;
     margin-bottom: 24px;
-    color: #ff9100;
+    color: #f56600;
 }
 
 .hero__heading span {
@@ -234,7 +234,7 @@
 }
 
 .highlight {
-    border-bottom: 4px solid rgb(132, 0, 255);
+    border-bottom: 4px solid #522D80;
 }
 
 @media screen and (max-width: 768px) {
@@ -274,7 +274,7 @@
 
 .main__content h1 {
     font-size: 2rem;
-    background-color: #ff9100;
+    background-color: #f56600;
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -286,9 +286,7 @@
 
 .main__content h2 {
     font-size: 1.98rem;
-    background: #ff8177;
-    background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
-    background: linear-gradient(to right, #8f0eff, #da22ff);
+    background: #522D80;
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -305,8 +303,8 @@
 .main__btn {
     font-size: 1.8rem;
     background: #833ab4;
-    background: -webkit-linear-gradient(to right, #fcb045, #833ab4);
-    background: linear-gradient(to right, #fcb045, #833ab4);
+    background: -webkit-linear-gradient(to right, #f56600, #522D80);
+    background: linear-gradient(to right, #f56600, #522D80);
     padding: 20px 60px;
     border: none;
     border-radius: 4px;
@@ -333,7 +331,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #fcb045;
+    background: #f56600;
     transition: all 0.35s;
     border-radius: 4px;
 }
@@ -359,7 +357,7 @@
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    background-image: linear-gradient(to right, #ffbb00 0%, #7700ff 100%);
+    background-image: linear-gradient(to right, #f56600 0%, #522D80 100%);
 }
 
 .fa-layer-group, fa-users {
@@ -367,11 +365,8 @@
 }
 
 #card-2 {
-    background: #ff512f;
-    background: -webkit-linear-gradient(to right, #ffbb00 , #7700ff);
-    background: linear-gradient(to right, #ffbb00, #7700ff);
+    background: #522D80;
 }
-
 /* Mobile Responsive */
 @media screen and (max-width: 1100px) {
     .main__container {
@@ -457,7 +452,7 @@
 }
 
 .services h1 {
-    background-color: #ff9100;
+    background-color: #f56600;
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
