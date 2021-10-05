@@ -250,7 +250,7 @@
 /* About Section */
 
 .main {
-    background-color: #fff;
+    background-color: #f56600;
     padding: 10rem 0;
 }
 
@@ -285,7 +285,7 @@
 }
 
 .main__content h2 {
-    font-size: 1.98rem;
+    font-size: 1.5rem;
     background: #522D80;
     background-size: 100%;
     -webkit-background-clip: text;
@@ -302,12 +302,10 @@
 
 .main__btn {
     font-size: 1.8rem;
-    background: #833ab4;
-    background: -webkit-linear-gradient(to right, #f56600, #522D80);
-    background: linear-gradient(to right, #f56600, #522D80);
+    background: #f56600;
     padding: 20px 60px;
-    border: none;
     border-radius: 4px;
+    border-color: #522d80;
     margin-top: 2rem;
     cursor: pointer;
     position: relative;
@@ -331,7 +329,7 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #f56600;
+    background: #522d80;
     transition: all 0.35s;
     border-radius: 4px;
 }
@@ -357,7 +355,7 @@
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    background-image: linear-gradient(to right, #f56600 0%, #522D80 100%);
+    background-image: linear-gradient(to right, #522d80 0%, #522D80 100%);
 }
 
 .fa-layer-group, fa-users {
