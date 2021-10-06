@@ -592,29 +592,26 @@
 
 .roster__card {
     margin: 10px;
-    height: 330px;
-    width: 330px;
+    height: 220px;
+    width: 220px;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 10px;
-    height: 330px;
-    width: 330px;
+    height: 220px;
+    width: 220px;
     background: url(face.webp);
-    background-size: 330px 330px;
     border-radius: 50%;
     transition: 0.3s ease-in;
 }
 
 .roster__card:nth-child(2) {
     background: url(face.webp);
-    background-size: 330px 330px;
 }
 
 .roster__card:nth-child(3) {
     background: url(face.webp);
-    background-size: 330px 330px;
 }
 
 .roster__card h2 {
@@ -623,7 +620,7 @@
     -webkit-font-smoothing: antialiased;
     text-align: center;
     position: relative;
-    top: 120px;
+    top: 150px;
 }
 
 .roster__card p {
@@ -634,7 +631,7 @@
     margin-top: 24px;
     font-size: 20px;
     position: relative;
-    top: 90px;
+    top: 120px;
 }
 
 .roster__card:hover {
