@@ -560,6 +560,101 @@
     }
 }
 
+/* Services Section */
+
+
+.roster {
+    background: #f56600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+}
+
+.roster h1 {
+    background-color: #fff;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+}
+
+.roster__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.roster__card {
+    margin: 10px;
+    height: 330px;
+    width: 330px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    height: 330px;
+    width: 330px;
+    background: url(face.webp);
+    background-size: 330px 330px;
+    border-radius: 50%;
+    transition: 0.3s ease-in;
+}
+
+.roster__card:nth-child(2) {
+    background: url(face.webp);
+    background-size: 330px 330px;
+}
+
+.roster__card:nth-child(3) {
+    background: url(face.webp);
+    background-size: 330px 330px;
+}
+
+.roster__card h2 {
+    color: #fff;
+    text-shadow:  #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    position: relative;
+    top: 120px;
+}
+
+.roster__card p {
+    color: #fff;
+    text-shadow:  #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    margin-top: 24px;
+    font-size: 20px;
+    position: relative;
+    top: 90px;
+}
+
+.roster__card:hover {
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+    .services__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .roster__wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Footer CSS */
 
 .footer__container {
