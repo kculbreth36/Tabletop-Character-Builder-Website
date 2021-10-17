@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnD Character Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+</head>
+<body>
+     <!-- Navbar Section -->
+     <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html#home" id="navbar__logo"><img src="dbanner(r).png" alt=""></a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html#home" class="navbar__links" id="home-page" style="font-family: Georgia, 'Times New Roman', Times, serif;">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="index.html#about" class="navbar__links" id="about-page" style="font-family: Georgia, 'Times New Roman', Times, serif;">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="notes.html" class="navbar__links" id="services-page" style="font-family: Georgia, 'Times New Roman', Times, serif;">Notes On Site</a>
+                </li><li class="navbar__btn">
+                    <a href="builder.html" class="button" id="signup" style="font-family: Georgia, 'Times New Roman', Times, serif;">Build Your Character</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Builder section -->
+    <nav class="builder">
+        <div class="builder__container">
+            <form action="results.html" method="GET">
+                <div class="builder__input">
+                    <label for="name" style="font-family: Georgia, 'Times New Roman', Times, serif;">Name: </label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="builder__input">
+                    <label for="gender" style="font-family: Georgia, 'Times New Roman', Times, serif;">Gender: </label>
+                    <input type="text" name="gender" id="gender" required> 
+                </div>
+                <div class="builder__race">
+                    <label for="races" style="font-family: Georgia, 'Times New Roman', Times, serif;">Choose a Race</label>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                    <select name="races" id="races" required>
+                        <option value="" disabled selected>Select a race</option>
+                        <option value="DragonBorn">DragonBorn</option>
+                        <option value="Dwarf">Dwarf</option>
+                        <option value="Elf">Elf</option>
+                        <option value="Gnome">Gnome</option>
+                        <option value="Half-Elf">Half-Elf</option>
+                        <option value="Halfling">Halfling</option>
+                        <option value="Half-Orc">Half-Orc</option>
+                        <option value="Human">Human</option>
+                        <option value="Tiefling">Tiefling</option>
+                    </select>
+                </div>
+                <div class="builder__subRace">
+                    <label for="subRace" style="font-family: Georgia, 'Times New Roman', Times, serif;">Pick a subrace</label>
+                    <select name="subRace" id="subRace">
+                        <option value="" disabled selected>Please select a subrace</option>
+                    </select>
+                    <script>
+                        $(document).ready(function () {
+                          $("#races").change(function () {
+                            switch($(this).val()) {
+                                case 'DragonBorn':
+                                    $("#subRace").html("<option value='' disabled selected>Please select your draconic ancestry</option><option value='Black'>Black</option><option value='Blue'>Blue</option><option value='Brass'>Brass</option><option value='Bronze'>Bronze</option><option value='Copper'>Copper</option><option value='Gold'>Gold</option><option value='Green'>Green</option><option value='Red'>Red</option><option value='Silver'>Silver</option><option value='White'>White</option>")
+                                    document.getElementById("race__description").innerHTML = "Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail."
+                                    document.getElementById("racialtraits").innerHTML = "+2 Strength, +1 Charisma, Draconic Ancestry, Breath Weapon, Damage Resistance"
+                                    break
+                                case 'Dwarf':
+                                    $("#subRace").html("<option value='' disabled selected>Please select a subrace</option><option value='Hill'>Hill</option><option value='Mountain'>Mountain</option>")
+                                    document.getElementById("race__description").innerHTML = "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal."
+                                    document.getElementById("racialtraits").innerHTML = "+2 Constitution, Darkvision, Dwarven Resilience, Dwarven Combat Training, StoneCunnning"
+                                    break
+                                case 'Elf':
+                                    $("#subRace").html("<option value='' disabled selected>Please select a subrace</option><option value='Dark'>Dark</option><option value='High'>High</option><option value='Wood'>Wood</option>")
+                                    document.getElementById("race__description").innerHTML = "Elves are a magical people of otherwordly grace, living in the world but not entirely apart of it."
+                                    document.getElementById("racialtraits").innerHTML = "+2 Dexterity, Darkvision, Keen Senses, Fey Ancestry, Trance"
+                                    break
+                                case 'Gnome':
+                                    $("#subRace").html("<option value='' disabled selected>Please select a subrace</option><option value='Deep'>Deep</option><option value='Forest'>Forest</option><option value='Rock'>Rock</option>")
+                                    break
+                                case 'Half-Elf':
+                                    document.getElementById("race__description").innerHTML = ""
+                                    break
+                                case 'Halfling':
+                                    $("#subRace").html("<option value='' disabled selected>Please select a subrace</option><option value='LightFoot'>LightFoot</option><option value='Stout'>Stout</option>")
+                                    break
+                                case 'Human':
+                                    $("#subRace").html("<option value='' disabled selected>Please select a subrace</option><option value='Default'>Default</option><option value='Variant'>Variant</option>")
+                                    break
+                                default:
+                                    $("#subRace").html("<option value='Default' disabled selected>Default</option>")
+                            }
+                          });
+                        });
+                    </script>
+                </div>
+                <div class="builder__class">
+                    <label for="class" style="font-family: Georgia, 'Times New Roman', Times, serif;">Choose a class</label>
+                    <select name="class" id="class" required>
+                        <option value="" disabled selected>Choose a class</option>
+                        <option value="Barbarian">Barbarian</option>
+                        <option value="Bard">Bard</option>
+                        <option value="Cleric">Cleric</option>
+                        <option value="Druid">Druid</option>
+                        <option value="Fighter">Fighter</option>
+                        <option value="Monk">Monk</option>
+                        <option value="Paladin">Paladin</option>
+                        <option value="Ranger">Ranger</option>
+                        <option value="Rogue">Rogue</option>
+                        <option value="Sorcerer">Sorcerer</option>
+                        <option value="Warlock">Warlock</option>
+                        <option value="Wizard">Wizard</option>
+                    </select>
+                    <script>
+                        $(document).ready(function () {
+                            $("#class").change(function () {
+                                switch($(this).val()) {
+                                    case 'Barbarian':
+                                        document.getElementById("classinfo").innerHTML = "A fierce warrior of primitive background who can enter a battle rage."
+                                        document.getElementById("hitdie").innerHTML = "d12"
+                                        document.getElementById("primaryability").innerHTML = "Strength"
+                                        document.getElementById("saves").innerHTML = "Strength & Constitution"
+                                        break;
+                                }
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="builder__btn">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div class="builder__characterinfo">
+            <h2 class="bulder__info" style="font-family: Georgia, 'Times New Roman', Times, serif;">Racial Info</h2>
+            <hr>
+            <p class="rthead">Race Info</p>
+            <br>
+            <p id="race__description" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
+            <br>
+            <p class="rthead" style="font-family: Georgia, 'Times New Roman', Times, serif;">Racial Traits</p>
+            <br>
+            <p id="racialtraits" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
+            <br>
+            <h2 class="builder__info" style="font-family: Georgia, 'Times New Roman', Times, serif;">Class Information</h2>
+            <hr>
+            <p class="rthead" style="font-family: Georgia, 'Times New Roman', Times, serif;">Class Info</p>
+            <br>
+            <p id="classinfo" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
+            <br>
+            <p class="rthead" style="font-family: Georgia, 'Times New Roman', Times, serif;">Hit Die: </p>
+            <p id="hitdie" style="font-family: Georgia, 'Times New Roman', Times, serif;" ></p>
+            <br>
+            <p class="rthead" style="font-family: Georgia, 'Times New Roman', Times, serif;">Primary Ability: </p>
+            <p id="primaryability" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
+            <br>
+            <p class="rthead" style="font-family: Georgia, 'Times New Roman', Times, serif;">Saves: </p>
+            <p id="saves" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
+        </div>
+    </nav>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="/sign-up">How it works</a>
+                    <a href="/sign-up">Testimonials</a>
+                    <a href="/sign-up">Careers</a>
+                    <a href="/sign-up">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Social Media</h2>
+                    <a href="https://discord.gg/t7Aza948">Discord</a>
+                    <a href="http://twitch.tv/ClemsonEsports">Twitch</a>
+                    <a href="https://twitter.com/clemsonesports?lang=en">Twitter</a>
+                    <a href="http://Instagram.com/ClemsonEsports">Instagram</a>
+                    <a href="https://goo.gl/XVW9MQ">Youtube</a>
+                    <a href="https://steamcommunity.com/groups/ClemsonEsports">Steam</a>
+                    <a href="http://facebook.com/ClemsonEsports">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <section class="socialmedia">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="" id="footer__logo">Character Builder</a>
+                </div>
+                <p class="website__rights">By: Kyle Culbreth</p>
+                <div class="social__icons">
+                    <a href="http://facebook.com/ClemsonEsports" class="social__icon--link"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/clemsonesports?lang=en" class="social__icon--link"><i class="fab fa-twitter"></i></a>
+                    <a href="http://Instagram.com/ClemsonEsports" class="social__icon--link"><i class="fab fa-instagram"></i></a>
+                    <a href="http://twitch.tv/ClemsonEsports" class="social__icon--link"><i class="fab fa-twitch"></i></a>
+                    <a href="https://goo.gl/XVW9MQ" class="social__icon--link"><i class="fab fa-youtube"></i></a>
+                    <a href="https://discord.gg/t7Aza948" class="social__icon--link"><i class="fab fa-discord"></i></a>
+                    <a href="https://steamcommunity.com/groups/ClemsonEsports" class="social__icon--link"><i class="fab fa-steam"></i></a>
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="dwebsite.js"></script>
+</body>
+</html>
