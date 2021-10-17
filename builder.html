@@ -66,7 +66,7 @@
                 <div class="builder__subRace">
                     <label for="subRace" style="font-family: Georgia, 'Times New Roman', Times, serif;">Pick a subrace</label>
                     <select name="subRace" id="subRace">
-                        <option value="" disabled selected>Please select a subrace</option>
+                        <option value="" disabled selected>Select a subrace</option>
                     </select>
                     <script>
                         $(document).ready(function () {
@@ -107,6 +107,12 @@
                                     break
                                 case 'Human':
                                     $("#subRace").html("<option value='' disabled selected>Please select a subrace</option><option value='Default'>Default</option><option value='Variant'>Variant</option>")
+                                    document.getElementById("race__description").innerHTML = "Humans are the most adaptable and ambitious people among the common races. TWhatever drives them, humans are the innovators, the achievers and the pioneers of the worlds."
+                                    document.getElementById("racial__traits").innerHTML = "+1 to All Ability Scores, Extra Language"
+                                    break
+                                case 'Tiefling':
+                                    document.getElementById("race__description").innerHTML = "To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the  lot of the tiefling."
+                                    document.getElementById("racial__traits").innerHTML = "+2 Charisma, +1 Intelligence, Darkvision, Hellish Resistance, Infernal Legacy"
                                     break
                                 default:
                                     $("#subRace").html("<option value='Default' disabled selected>Default</option>")
@@ -118,7 +124,7 @@
                 <div class="builder__class">
                     <label for="class" style="font-family: Georgia, 'Times New Roman', Times, serif;">Choose a class</label>
                     <select name="class" id="class" required>
-                        <option value="" disabled selected>Choose a class</option>
+                        <option value="" disabled selected>Select a class</option>
                         <option value="Barbarian">Barbarian</option>
                         <option value="Bard">Bard</option>
                         <option value="Cleric">Cleric</option>
@@ -137,11 +143,77 @@
                             $("#class").change(function () {
                                 switch($(this).val()) {
                                     case 'Barbarian':
-                                        document.getElementById("classinfo").innerHTML = "A fierce warrior of primitive background who can enter a battle rage."
+                                        document.getElementById("class__description").innerHTML = "A fierce warrior of primitive background who can enter a battle rage."
                                         document.getElementById("hitdie").innerHTML = "d12"
                                         document.getElementById("primaryability").innerHTML = "Strength"
                                         document.getElementById("saves").innerHTML = "Strength & Constitution"
-                                        break;
+                                        break
+                                    case 'Bard':
+                                        document.getElementById("class__description").innerHTML = "An inspiring magician whose power echoes the music of creation."
+                                        document.getElementById("hitdie").innerHTML = "d8"
+                                        document.getElementById("primaryability").innerHTML = "Charisma"
+                                        document.getElementById("saves").innerHTML = "Dexterity & Charisma"
+                                        break
+                                    case 'Cleric':
+                                        document.getElementById("class__description").innerHTML = "A priestly champion who wields divine magic in service of a higher power."
+                                        document.getElementById("hitdie").innerHTML = "d8"
+                                        document.getElementById("primaryability").innerHTML = "Wisdom"
+                                        document.getElementById("saves").innerHTML = "Wisdom & Charisma"
+                                        break
+                                    case 'Druid':
+                                        document.getElementById("class__description").innerHTML = "A priest of the Old Faith, wielding the powers of nature and adopting animal forms."
+                                        document.getElementById("hitdie").innerHTML = "d8"
+                                        document.getElementById("primaryability").innerHTML = "Wisdom"
+                                        document.getElementById("saves").innerHTML = "Intelligence & Wisdom"
+                                        break
+                                    case 'Fighter':
+                                        document.getElementById("class__description").innerHTML = "A master of martial combal, skiulled with a variety of weapons and armor."
+                                        document.getElementById("hitdie").innerHTML = "d10"
+                                        document.getElementById("primaryability").innerHTML = "Strength or Dexterity"
+                                        document.getElementById("saves").innerHTML = "Strength & Constitution"
+                                        break
+                                    case 'Monk':
+                                        document.getElementById("class__description").innerHTML = "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection."
+                                        document.getElementById("hitdie").innerHTML = "d8"
+                                        document.getElementById("primaryability").innerHTML = "Dexterity & Wisdom"
+                                        document.getElementById("saves").innerHTML = "Strength & Dexterity"
+                                        break
+                                    case 'Paladin':
+                                        document.getElementById("class__description").innerHTML = "A holy warrior bound to a sacred oath."
+                                        document.getElementById("hitdie").innerHTML = "d10"
+                                        document.getElementById("primaryability").innerHTML = "Strength & Charisma"
+                                        document.getElementById("saves").innerHTML = "Wisdom & Charisma"
+                                        break
+                                    case 'Ranger':
+                                        document.getElementById("class__description").innerHTML = "A warrior who combats threats on the edges of civilization."
+                                        document.getElementById("hitdie").innerHTML = "d10"
+                                        document.getElementById("primaryability").innerHTML = "Dexterity & Wisdom"
+                                        document.getElementById("saves").innerHTML = "Strength & Dexterity"
+                                        break
+                                    case 'Rogue':
+                                        document.getElementsById("class__description").innerHTML = "A scoundrel who uses stealth and trickery to overcome obstacles and enemies."
+                                        document.getElementsById("hitdie").innerHTML = "d8"
+                                        document.getElementsById("primaryability").innerHTML = "Dexterity"
+                                        document.getElementsById("saves").innerHTML = "Dexterity & Intelligence"
+                                        break
+                                    case 'Sorcerer':
+                                        document.getElementsById("class__description").innerHTML = "A spellcaster who draws on inherent magic from a gift or bloodline."
+                                        document,getElementsById("hitdie").innerHTML = "d6"
+                                        document.getElementsById("primaryability").innerHTML = "Charisma"
+                                        document.getElementsById("saves").innerHTML = "Constitution & Charisma"
+                                        break
+                                    case 'Warlock':
+                                        document.getElementsById("class__description").innerHTML = "A wielder of magic that is derived from a bargain with an extraplanar entity."
+                                        document.getElementsById("hitdie").innerHTML = "d8"
+                                        document.getElementsById("primaryability").innerHTML = "Charisma"
+                                        document.getElementsById("saves").innerHTML = "Wisdom & Charisma"
+                                        break
+                                    case 'Wizard':
+                                        document.getElementsById("class__description").innerHTML = "A scholarly magic-user capable of manipulating the structures of reality."
+                                        document.getElementsById("hitdie").innerHTML = "d6"
+                                        document.getElementsById("primaryability").innerHTML = "Intelligence"
+                                        document.getElementsById("saves").innerHTML = "Intelligence & Wisdom"
+                                        break
                                 }
                             });
                         });
@@ -168,7 +240,7 @@
             <hr>
             <p class="rthead" style="font-family: Georgia, 'Times New Roman', Times, serif;">Class Info</p>
             <br>
-            <p id="classinfo" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
+            <p id="class__description" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
             <br>
             <p class="rthead" style="font-family: Georgia, 'Times New Roman', Times, serif;">Hit Die: </p>
             <p id="hitdie" style="font-family: Georgia, 'Times New Roman', Times, serif;" ></p>
