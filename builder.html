@@ -75,20 +75,22 @@
                                 case 'DragonBorn':
                                     $("#subRace").html("<option value='' disabled selected>Please select your draconic ancestry</option><option value='Black'>Black</option><option value='Blue'>Blue</option><option value='Brass'>Brass</option><option value='Bronze'>Bronze</option><option value='Copper'>Copper</option><option value='Gold'>Gold</option><option value='Green'>Green</option><option value='Red'>Red</option><option value='Silver'>Silver</option><option value='White'>White</option>")
                                     document.getElementById("race__description").innerHTML = "Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail."
-                                    document.getElementById("racialtraits").innerHTML = "+2 Strength, +1 Charisma, Draconic Ancestry, Breath Weapon, Damage Resistance"
+                                    document.getElementById("racial__traits").innerHTML = "+2 Strength, +1 Charisma, Draconic Ancestry, Breath Weapon, Damage Resistance"
                                     break
                                 case 'Dwarf':
                                     $("#subRace").html("<option value='' disabled selected>Please select a subrace</option><option value='Hill'>Hill</option><option value='Mountain'>Mountain</option>")
                                     document.getElementById("race__description").innerHTML = "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal."
-                                    document.getElementById("racialtraits").innerHTML = "+2 Constitution, Darkvision, Dwarven Resilience, Dwarven Combat Training, StoneCunnning"
+                                    document.getElementById("racial__traits").innerHTML = "+2 Constitution, Darkvision, Dwarven Resilience, Dwarven Combat Training, StoneCunnning"
                                     break
                                 case 'Elf':
                                     $("#subRace").html("<option value='' disabled selected>Please select a subrace</option><option value='Dark'>Dark</option><option value='High'>High</option><option value='Wood'>Wood</option>")
                                     document.getElementById("race__description").innerHTML = "Elves are a magical people of otherwordly grace, living in the world but not entirely apart of it."
-                                    document.getElementById("racialtraits").innerHTML = "+2 Dexterity, Darkvision, Keen Senses, Fey Ancestry, Trance"
+                                    document.getElementById("racial__traits").innerHTML = "+2 Dexterity, Darkvision, Keen Senses, Fey Ancestry, Trance"
                                     break
                                 case 'Gnome':
                                     $("#subRace").html("<option value='' disabled selected>Please select a subrace</option><option value='Deep'>Deep</option><option value='Forest'>Forest</option><option value='Rock'>Rock</option>")
+                                    document.getElementById("race__description").innerHTML = "A gnome's energy and enthusiasm for living shines through every inch of his or her tiny body."
+                                    document.getElementById("racial__traits").innerHTML = "+2 Intelligence, Darkvision, Gnome Cunning"
                                     break
                                 case 'Half-Elf':
                                     document.getElementById("race__description").innerHTML = "hi"
@@ -153,7 +155,7 @@
             <br>
             <p class="rthead" style="font-family: Georgia, 'Times New Roman', Times, serif;">Racial Traits</p>
             <br>
-            <p id="racialtraits" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
+            <p id="racial__traits" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
             <br>
             <h2 class="builder__info" style="font-family: Georgia, 'Times New Roman', Times, serif;">Class Information</h2>
             <hr>
