@@ -319,7 +319,6 @@
     z-index: 2;
     color: #000;
     text-decoration: none;
-
 }
 
 
@@ -451,9 +450,9 @@
         padding: 10px;
     }
 
-    .builder__raceinfo {
+    .builder__container {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
@@ -462,11 +461,14 @@
         width: 100%;
         max-width: 1300px;
         padding: 0 50px;
+        background-color: #930c10;
+        border-radius: 2%;
+        color: #d4d4d4;
     }
 
-    .builder__container {
+    .builder__raceinfo {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
@@ -494,6 +496,10 @@
     }
 
     .builder__class {
+        padding: 10px;
+    }
+    
+    .builder__background {
         padding: 10px;
     }
 
