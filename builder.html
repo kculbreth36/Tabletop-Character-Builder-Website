@@ -148,7 +148,7 @@
                     </select>
                 </div>
                 <div class="builder__class">
-                    <label for="class" style="font-family: Georgia, 'Times New Roman', Times, serif;">Choose a Class</label>
+                    <label for="class" style="font-family: Georgia, 'Times New Roman', Times, serif;">Choose a Class <sup><a href="#class" style="color: #d4d4d4;">ℹ️</a></sup></label>
                     <select name="class" id="class" required>
                         <option value="" disabled selected>Select a class</option>
                         <option value="Barbarian">Barbarian</option>
@@ -249,6 +249,22 @@
                     <label for="background" style="font-family: Georgia, 'Times New Roman', Times, serif;">Pick a Background</label>
                     <select name="background" id="background">
                         <option value="" disabled selected>Select a background</option>
+                        <option value="Acolyte">Acolyte</option>
+                        <option value="Charlatan">Charlatan</option>
+                        <option value="Criminal">Criminal / Spy</option>
+                        <option value="Entertainer">Entertainer</option>
+                        <option value="Folk Hero">Folk Hero</option>
+                        <option value="Gladiator">Gladiator</option>
+                        <option value="Guild Artisan">Guild Artisan / Guild Merchant</option>
+                        <option value="Hermit">Hermit</option>
+                        <option value="Knight">Knight</option>
+                        <option value="Noble">Noble</option>
+                        <option value="Outlander">Outlander</option>
+                        <option value="Pirate">Pirate</option>
+                        <option value="Sage">Sage</option>
+                        <option value="Sailor">Sailor</option>
+                        <option value="Soldier">Soldier</option>
+                        <option value="Urchin">Urchin</option>
                     </select>
                 </div>
                 <div class="builder__btn">
@@ -282,17 +298,159 @@
             <br>
             <p class="rthead" style="font-family: Georgia, 'Times New Roman', Times, serif;">Saves: </p>
             <p id="saves" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
-
-            <table>
+        </div>
+        <div class="builder__table">
+            <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;">Class Table</h1>
+            <table class="class__table" id="class">
                 <tr>
-                    <td  style="font-family: Georgia, 'Times New Roman', Times, serif;">Saves</td>
-                    <td  style="font-family: Georgia, 'Times New Roman', Times, serif;">Primary Stat</td>
+                    <th>Class</th>
+                    <th>Class Description</th>
+                    <th>HitDie</th>
+                    <th>Primary Ability</th>
+                    <th>Saves</th>
+                    <th colspan="3">Proficiencies
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>Armor</td>
+                                <td>Weapons</td>
+                                <td>Tools</td>
+                            </tr>
+                        </table>
+                    </th>
                 </tr>
+                <!-- Barbarian -->
                 <tr>
-                    <p id="saves"></p>
+                    <td>Barbarian</td>
+                    <td>For some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but also uncanny reflexes, resilience, and feats of strength.</td>
+                    <td>1d12</td>
+                    <td>Strength</td>
+                    <td>Strength, Constitution</td>
+                    <td>Light/Medium Armor, Shields</td>
+                    <td>Simple/Martial Weapons</td>
+                    <td>-</td>
+                </tr>
+                <!-- Bard -->
+                <tr>
+                    <td>Bard</td>
+                    <td>Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds. The bard is a master of song, speech, and the magic they contain</td>
+                    <td>1d8</td>
+                    <td>Charisma</td>
+                    <td>Dexterity, Charisma</td>
+                    <td>Light Armor</td>
+                    <td>Simple Weapons, Hand-Crossbows, Longswords, Rapiers, Shortswords</td>
+                    <td>Three Musical Instruments of your Choice</td>
+                </tr>
+                <!-- Cleric -->
+                <tr>
+                    <td>Cleric</td>
+                    <td>Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied as the gods they serve, clerics strive to embody the handiwork of their deities. No ordinary priest, a cleric is imbued with divine magic.</td>
+                    <td>1d8</td>
+                    <td>Wisdom</td>
+                    <td>Charisma, Wisdom</td>
+                    <td>Light/Medium Armor, Shields</td>
+                    <td>Simple Weapons</td>
+                    <td>-</td>
+                </tr>
+                <!-- Druid -->
+                <tr>
+                    <td>Druid</td>
+                    <td>Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of nature's resilience, cunning, and fury. They claim no mastery over nature, but see themselves as extensions of nature's indomitable will.</td>
+                    <td>1d8</td>
+                    <td>Wisdom</td>
+                    <td>Intelligence, Wisdom</td>
+                    <td>Light/Medium Armor, Shields (No Metal)</td>
+                    <td>Clubs, Daggers, Darts, Javelins, Maces, Quarterstaffs, Scimitars, Sickles, Slings, Spears</td>
+                    <td>Herbalism Kit</td>
+                </tr>
+                <!-- Fighter -->
+                <tr>
+                    <td>Fighter</td>
+                    <td>Fighters share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat. They are well acquainted with death, both meting it out and staring it defiantly in the face.</td>
+                    <td>1d10</td>
+                    <td>Strength or Dexterity</td>
+                    <td>Constitution, Strength</td>
+                    <td>All Armor, Shields</td>
+                    <td>Simple/Martial Weapons</td>
+                    <td>-</td>
+                </tr>
+                <!-- Monk -->
+                <tr>
+                    <td>Monk</td>
+                    <td>Monks are united in their ability to magically harness the energy that flows in their bodies. Whether channeled as a striking display of combat prowess or a subtler focus of defensive ability and speed, this energy infuses all that a monk does.</td>
+                    <td>1d8</td>
+                    <td>Dexterity and Wisdom</td>
+                    <td>Dexterity, Strength</td>
+                    <td>None</td>
+                    <td>Simple Weapons, Shortswords</td>
+                    <td>Choose one type of artisan's tools or one musical instrument</td>
+                </tr>
+                <!-- Paladin -->
+                <tr>
+                    <td>Paladin</td>
+                    <td>Whether sworn before a god's altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in a moment of desperation and grief with the dead as the only witness, a paladin's oath is a powerful bond.</td>
+                    <td>1d10</td>
+                    <td>Charisma and Strength</td>
+                    <td>Charisma, Wisdom</td>
+                    <td>All Armor, Shields</td>
+                    <td>Simple/Martial Weapons</td>
+                    <td>-</td>
+                </tr>
+                <!-- Ranger -->
+                <tr>
+                    <td>Ranger</td>
+                    <td>Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch</td>
+                    <td>1d10</td>
+                    <td>Dexterity and Wisdom</td>
+                    <td>Dexterity, Wisdom</td>
+                    <td>Light/Medium Armor, Shields</td>
+                    <td>Simple/Martial Weapons</td>
+                    <td>-</td>
+                </tr>
+                <!-- Rogue -->
+                <tr>
+                    <td>Rogue</td>
+                    <td>Rogues rely on skill, stealth, and their foes' vulnerabilities to get the upper hand in any situation. They have a knack for finding the solution to just about any problem, demonstrating a resourcefulness and versatility that is the cornerstone of any successful adventuring party.</td>
+                    <td>1d8</td>
+                    <td>Dexterity</td>
+                    <td>Dexterity, Intelligence</td>
+                    <td>Light Armor</td>
+                    <td>Simple Weapons, Hand-Crossbows, Longswords, Rapiers, Shortswords</td>
+                    <td>Thieves' Tools</td>
+                </tr>
+                <!-- Sorcerer -->
+                <tr>
+                    <td>Sorcerer</td>
+                    <td>Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. No one chooses sorcery; the power chooses the sorcerer.</td>
+                    <td>1d6</td>
+                    <td>Charisma</td>
+                    <td>Constitution, Charisma</td>
+                    <td>-</td>
+                    <td>Daggers, Darts, Slings, Quarterstaffs, Light-Crossbows</td>
+                    <td>-</td>
+                </tr>
+                <!-- Warlock -->
+                <tr>
+                    <td>Warlock</td>
+                    <td>Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular.</td>
+                    <td>1d8</td>
+                    <td>Charisma</td>
+                    <td>Charisma, Wisdom</td>
+                    <td>Light Armor</td>
+                    <td>Simple Weapons</td>
+                    <td>-</td>
+                </tr>
+                <!-- Wizard -->
+                <tr>
+                    <td>Wizard</td>
+                    <td>Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, brute-force mind control, and much more.</td>
+                    <td>1d6</td>
+                    <td>Intelligence</td>
+                    <td>Intelligence, Wisdom</td>
+                    <td>-</td>
+                    <td>Daggers, Darts, Slings, Quarterstaffs, Light-Crossbows</td>
+                    <td>-</td>
                 </tr>
             </table>
-
         </div>
     </nav>
 

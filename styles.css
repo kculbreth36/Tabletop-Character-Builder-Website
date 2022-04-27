@@ -89,7 +89,19 @@
     background: #930c10;
     color: #000;
     transition: all 0.3s ease;
-    border-radius: 10%;
+}
+
+.button:after {
+    background: #d4d4d4;
+    transition: all 0.35s;
+}
+
+.button:hover {
+    color: #d4d4d4;
+}
+
+.button:hover:after {
+    width: 100%;
 }
 
 .navbar__links:hover {
@@ -297,6 +309,16 @@
     -moz-text-fill-color: transparent;
 }
 
+.main__content h3 {
+    font-size: 1rem;
+    background: #930c10;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
 .main__content p {
     margin-top: 1rem;
     font-size: 2rem;
@@ -435,6 +457,69 @@
 }
 
 
+/* Faq CSS */
+    .faq-heading{
+        border-bottom: #777;
+        padding: 20px 60px;
+    }
+    .faq-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .hr-line{
+        width: 100%;
+        margin: auto;
+    }
+    /* Style the buttons that are used to open and close the faq-page body */
+    .faq-page {
+        /* background-color: #eee; */
+        color: #000;
+        cursor: pointer;
+        padding: 30px 20px;
+        width: 100%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        margin: auto;
+    }
+    .faq-body{
+        margin: auto;
+        /* text-align: center; */
+        width: 100%; 
+        padding: auto;
+    }
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .faq-page:hover {
+        background-color: #930c10;
+    }
+    /* Style the faq-page panel. Note: hidden by default */
+    .faq-body {
+        padding: 0 10px;
+        background-color: #d9d9d9;
+        color: #000;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        display: none;
+        overflow: hidden;
+    }
+    .faq-body h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .faq-page:after {
+        content: '\02795';
+        /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: #000;
+        float: right;
+        margin-left: 5px;
+    }
+    .active:after {
+        content: "\2796";
+        /* Unicode character for "minus" sign (-) */
+    }
+
+
 /* Builder CSS */
 
     .builder {
@@ -456,13 +541,12 @@
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        height: 90%;
+        height: 100%;
         z-index: 1;
         width: 100%;
         max-width: 1300px;
         padding: 0 50px;
         background-color: #930c10;
-        border-radius: 2%;
         color: #d4d4d4;
     }
 
@@ -477,6 +561,27 @@
         width: 100%;
         max-width: 1300px;
         padding: 0 50px;
+    }
+
+    .builder__table {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 100%;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 10px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        background-color: #930c10;
+        color: #d4d4d4;
+    }
+
+    .class__table, .class__table th, .class__table td {
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 
     .builder__input {
@@ -513,6 +618,11 @@
 
     .rthead {
         font-weight: bold;
+    }
+
+    .stats, th, td {
+        border: 1px solid black;
+        padding: 2px;
     }
 
 /* Footer CSS */
